@@ -1,6 +1,5 @@
-import ExpenseItems from './Componets/ExpenseItem'
-import Expense from './Componets/Expense'
-
+import Expense from './Componets/Expenses/Expense'
+import NewExpense from './Componets/NewExpense/NewExpense'
 
 function App() {
   var expense=[
@@ -29,13 +28,16 @@ function App() {
  title : "Go watch Movie",
  expenseAmount : 500
  },]
+
+ const addExpenseHandler = (expenseData) =>{
+   console.log('expeseData Comming')
+   console.log(expenseData)
+ }
   return (
 
     <div >
-
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expense expense={expense}/>
-
-
      </div>
   );
 }
