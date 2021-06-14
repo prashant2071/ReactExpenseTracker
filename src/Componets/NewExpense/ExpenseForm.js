@@ -40,7 +40,7 @@ const ExpenseForm = (props) => {
     e.preventDefault();
     const expenseData = {
       title: enteredtitle,
-      amount: enteredAmount,
+      expenseAmount: enteredAmount,
       date: new Date(enteredDate),
     };
     console.log(expenseData);
@@ -77,7 +77,7 @@ const ExpenseForm = (props) => {
           <input
             type="date"
             value={enteredDate}
-            min="2020-12-26"
+            min="2020-01-26"
             max="2022-12-27"
             onChange={changeDateHandler}
           />
